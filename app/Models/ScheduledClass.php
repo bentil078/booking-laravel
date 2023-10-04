@@ -9,6 +9,13 @@ class ScheduledClass extends Model
 {
     use HasFactory;
 
+    protected $guarded = null;
+
+    // convert datetime from string in user input to datetime to prevent errors
+    protected $casts = [
+        'date_time' => 'datetime'
+    ];
+
     // Scheduled class belongs to a user
     public function instructor(){
         return $this->belongsTo(User::class, 'instructor_id');
@@ -16,6 +23,6 @@ class ScheduledClass extends Model
 
     // Scheduled class belongs to a class type
     public function classType(){
-        return $this->belongsTo(classType::class);
+        return $this->belongsTo(ClassType::class);
     }
 }

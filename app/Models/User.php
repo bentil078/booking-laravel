@@ -39,12 +39,11 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'email_verified_at' => 'datetime'
     ];
 
     // Get all the scheduled classes of an instructor
     public function scheduledClasses(){
-        return $this->hasMany(scheduledClasses::class, 'instructor_id');
+        return $this->hasMany(ScheduledClass::class, 'instructor_id');
     }
 }
