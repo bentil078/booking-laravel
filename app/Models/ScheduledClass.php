@@ -25,4 +25,11 @@ class ScheduledClass extends Model
     public function classType(){
         return $this->belongsTo(ClassType::class);
     }
+
+    // All members who have booked for a particlar class
+    public function members() {
+        return $this->belongsToMany(User::class, 'bookings');
+    }
+
+
 }
