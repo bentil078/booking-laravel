@@ -22,8 +22,9 @@ class NotifyClassCanceled
      */
     public function handle(ClassCanceled $event): void
     {
+        
         $scheduledClass = $event->scheduledClass;
 
-        Log::info($scheduledClass);
+        // Log::info($scheduledClass);
     }
 }
