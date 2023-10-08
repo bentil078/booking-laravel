@@ -11,7 +11,7 @@
 # booking-laravel
 Booking is a laravel application with Three user roles. The roles are Admin, Instructor  and Member/User.
 
-Instructor are to schedule a class and delete/cancel classes.
+Instructors are to schedule a class and delete/cancel classes.
 
 Users are to check for available classes and book for any of the classes available
 
@@ -19,6 +19,13 @@ Users are to check for available classes and book for any of the classes availab
 
 ## How to set up
 Duplicate the .env.example file and rename it to .env and put all your connections in there
+
+First clone the project
+open your terminal and do composer install
+set up your database connections from the .env file
+Run php artisan migrate
+You can generate a key for your version with php artisan key:generate
+finally php artisan serve
 
 
 ## To-do
