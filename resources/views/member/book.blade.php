@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-xs sm:rounded-lg">
                 <div class="p-6 text-gray-900 max-w-2xl divide-y">
                     @forelse ($scheduledClasses as $class)
                   <div class="py-6">
@@ -18,7 +18,7 @@
                            <p class="mt-2">{{ $class->classType->description }}</p>
                            <span class="text-slate-600 text-sm">{{ $class->classType->minutes }} minutes</span>
                         </div>
-                        <div class="text-right flex-shrink-0">
+                        <div class="text-right shrink-0">
                            <p class="text-lg font-bold">{{ $class->date_time->format('g:i a') }}</p>
                            <p class="text-sm">{{ $class->date_time->format('jS M') }}</p>
                         </div>
